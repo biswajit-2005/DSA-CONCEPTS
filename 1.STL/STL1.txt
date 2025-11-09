@@ -1,1 +1,68 @@
-DAy : 1
+Day : 1 [9.11.2025]
+--------------------------------VECTORS--------------------------------------
+A vector in C++ is a dynamic array — it can grow or shrink in size automatically as elements are inserted or deleted.Capacity increases double when size of vector fills , to add new space.
+---SYNTAX
+#include <vector>
+using namespace std;
+
+vector<data_type> vector_name;
+
+---FUNCTIONS
+1. push_back(x) : add element x at the end
+2.insert(pos,val) : insert element before position
+
+--remove
+3. pop_back() : remove last element
+4. erase(pos) : Remove element at position
+5. clear() : Remove all elements
+
+--Accesing elements
+6. v[i] : access using index
+7. at(i) : access with bounds checking
+8. front() : first element
+9. back() : last element
+
+--Capacity FUNCTIONS
+10. size() : number of elements
+11. Capacity() : current allocated memory
+12. empty() : check if vector is empty
+13. resize(n) : changes size to namespace
+
+--Iterators
+14. begin() : points to 1st element [cout << *(begin()) ; it gives the 1st element]
+15. end() : points after the last element (it gives nothing if we dereferencing this , because it points to the position after the last element)
+16. rbegin() : Reverse begin
+17. rend() : Reverse end 
+
+----code snipet:
+ for (auto it = v.begin(); it != v.end(); ++it) 
+    {
+        cout << *it << " ";
+    }
+---
+iterate using foreach loop
+    for (int x : v)
+       {
+           cout << x << " ";
+       }
+        
+WHAT IS AUTO keyword ?
+The auto keyword allows the compiler to automatically deduce (infer) the data type of a variable from its initializer.
+You don’t need to explicitly write the data type — the compiler figures it out.
+Must be initialized at the time of declaration
+example : 
+vector<int>::iterator it = v.begin(); // with out auto
+auto it = v.begin();
+
+auto b = 3.14;       // double
+auto c = 'A';        // char
+auto d = "Hello";    // const char*
+
+SWAPING IN VECTORS :
+The swap() function is used to exchange the contents of two vectors.
+It works in constant time O(1) because it only swaps internal pointers, not individual elements.
+--syntax :
+v1.swap(v2);
+or
+swap(v1, v2);  // Using STL global function
+
