@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// Time complexity = O(n) | Space complexity = O(n) .
 void bubble(int arr[], int n)
 {
     for (int i = 0; i < n - 1; i++)
