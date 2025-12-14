@@ -18,6 +18,9 @@ int main()
     {
         cout << p.first << " " << p.second << endl;
     }
+    // searching in map
+    if (m.find(2) != m.end())
+        cout << "Key found";
 
     m.erase(2);         // erase by key
     m.erase(m.begin()); // erase first element
