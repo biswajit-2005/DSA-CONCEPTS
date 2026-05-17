@@ -146,8 +146,8 @@
         // Update remaining amount
         totalAmount -= actualPay;
 
-        if (totalAmount < 0)
-            totalAmount = 0;
+        //if (totalAmount < 0)
+            //totalAmount = 0;
 
         // Update input field
         totalAmountInput.value = totalAmount.toFixed(2);
@@ -178,7 +178,7 @@
         document.getElementById("depositAmount").value = "";
 
         // Loan complete
-        if (totalAmount === 0) {
+        if (totalAmount <= 0) {
             alert("Loan Fully Paid!");
         }
     }
