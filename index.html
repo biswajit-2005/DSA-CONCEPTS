@@ -133,7 +133,7 @@
         let monthlyRate = interestRate / 12 / 100;
 
         // Floor interest
-        let interest = Math.floor(totalAmount * monthlyRate);
+        let interest = Math.round(totalAmount * monthlyRate);
 
         // Actual payment towards principal
         let actualPay = deposit - interest;
